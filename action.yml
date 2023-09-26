@@ -1,0 +1,25 @@
+name: "Download BPMN models"
+description: 'GitHub Action for automated download of BPMN models from Camunda web modeler api'
+author: "Kristoffer Högberg"
+
+inputs:
+  tag:
+    description: 'Name of the tag model tag to download'
+    required: true
+  destination:
+    description: 'Location of the downloaded BPMN models'
+    required: true
+  client_id:
+    description: 'Camunda modeler api client id'
+    required: true
+  client_secret:
+      description: 'Camunda modeler api client secret'
+      required: true
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
+branding:
+  icon: 'activity'
+  color: 'green'
