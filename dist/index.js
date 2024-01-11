@@ -49,7 +49,7 @@ const getToken = async () => {
     }
 };
 const getFileIdsByMilestoneTag = async (token) => {
-    const urlMilestone = 'https://modeler.cloud.camunda.io/api/beta/milestones/search';
+    const urlMilestone = 'https://modeler.cloud.camunda.io/api/v1/milestones/search';
     const body = {
         "filter": {
             "id": null, "name": TAG, "created": null, "createdBy": {
@@ -74,7 +74,7 @@ const getFileIdsByMilestoneTag = async (token) => {
     }
 };
 const getFileContent = async (token, fileIds) => {
-    const baseUrl = 'https://modeler.cloud.camunda.io/api/beta/files/';
+    const baseUrl = 'https://modeler.cloud.camunda.io/api/v1/files/';
     try {
         const responses = await Promise.all(fileIds.map(async (id) => {
             const url = `${baseUrl}${id}`;
