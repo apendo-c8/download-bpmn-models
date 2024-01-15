@@ -14,7 +14,7 @@ You can simply refer to this GitHub action in any GitHub workflow.:
 
    ```yaml
          - name: Download BPMN Models
-           uses: apendo-c8/download-bpmn-models@v1
+           uses: apendo-c8/download-bpmn-models@v1.2
            with:
              tag: 'Tag name (${{ github.ref_name }} will reference the latest pushed tag or branch)'
              destination: 'Location of the downloaded BPMN models'
